@@ -27,9 +27,11 @@ void setup()
 
 void loop()
 {
+  //graden van de potmeter uitlezen
   int potMeasure = analogRead(A5);
+  //graden in log zetten
   Serial.println(potMeasure);
- 
+    //lampjes aan of uitzetten als graden groter of kleiner zijn dan de getallen
     if (potMeasure < 30)
     {
       digitalWrite(Ledpin1, LOW);

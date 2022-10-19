@@ -1,3 +1,4 @@
+//kleur van elke pin aanspreken
 int redPin= 9;
 int greenPin = 6;
 int bluePin = 5;
@@ -7,6 +8,8 @@ void setup() {
   pinMode(bluePin, OUTPUT);
 }
 void loop() {
+  //rood, blauw en groen lampje hebben een waarde van max 255
+  //255/15 = 17 dus 17 stappen per lichtje
   for(int red = 0; red < 17; red++)
   {
     analogWrite(redPin, red * 15);
